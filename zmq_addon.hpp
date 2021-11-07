@@ -747,6 +747,7 @@ class active_poller_t
 };     // class active_poller_t
 #endif //  defined(ZMQ_BUILD_DRAFT_API) && defined(ZMQ_CPP11) && defined(ZMQ_HAVE_POLLER)
 
+context_t& shared_context();
 
 } // namespace zmq
 

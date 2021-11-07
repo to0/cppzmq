@@ -664,6 +664,11 @@ class message_t
         if (rc != 0)
             throw error_t();
     }
+
+    void set_group(const std::string &group)
+    {
+        set_group(group.c_str());
+    }
 #endif
 
     // interpret message content as a string
@@ -2024,6 +2029,11 @@ class socket_base
         int rc = zmq_join(_handle, group);
         if (rc != 0)
             throw error_t();
+    }
+
+    void join(const std::string& group)
+    {
+        join(group.c_str());
     }
 
     void leave(const char *group)
